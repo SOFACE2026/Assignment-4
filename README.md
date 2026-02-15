@@ -31,13 +31,20 @@ In the following parts we will implement the classes just described.
 
 ```python
     # do double-dispatch like this
-    visitor.visit(this);
+    visitor.visit(*this);
 ```
 
 3. Re-run the test to verify that the first section of the test is passing
 4. Implement the `Tourist` class
    - Implement the `visit` method(s) of the `Tourist` class. Whenever visiting an animal this should add store the name of the lower-case name of the animal in the vector `visited`
 5. Re-run the test to verify the second section of the test is passing
+6. Implement the `Keeper` class
+   - Implement the `visit` method(s) of the `Keeper` class. Unlike the tourist who just observes, the keeper must interact with the animals to fulfill their needs.
+   - When visiting a `Monkey`, call `feed_banana()`.
+   - When visiting a `Tiger`, call `scratch_back()`.
+   - When visiting a `Fish`, call `clean_teeth()`.
+7. Note that the `Keeper`'s interactions will be put to use and tested in the upcoming Observer section!
+
 
 ## Observer Pattern
 

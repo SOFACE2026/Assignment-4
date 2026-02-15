@@ -1,9 +1,12 @@
 #include "animal_rights_group.hpp"
 
-AnimalRightsGroup::AnimalRightsGroup(int n_monkeys, int n_tigers, int n_fish) : n_monkeys(n_monkeys), n_tigers(n_tigers), n_fish(n_fish)
+AnimalRightsGroup::AnimalRightsGroup(int n_monkeys, int n_tigers, int n_fish)
+    : n_monkeys(n_monkeys), n_tigers(n_tigers), n_fish(n_fish),
+      n_monkeys_fed(0), n_tigers_scratched(0), n_fish_teeth_brushed(0)
 {
 }
 
+// Implement this (Observer part)
 void AnimalRightsGroup::update(AnimalEvent event)
 {
     if (event == AnimalEvent::MonkeyFed)
